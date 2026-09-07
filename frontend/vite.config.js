@@ -12,6 +12,6 @@ export default defineConfig({
     },
   },
   preview:{
-    allowedHosts:["deployment-53fz.onrender.com"],
+    allowedHosts:true,
   }
 })
