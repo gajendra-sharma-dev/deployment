@@ -26,7 +26,9 @@ const port = 3000
 ]
 
 
-app.use(cors());
+app.use(cors({
+  origin: "https://deployment-gajendra8.vercel.app"
+}))
 
 app.get('/api/code', (req, res) => {
   res.send(jokes)
