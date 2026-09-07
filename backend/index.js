@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require("cors")
 const app = express()
 const port = 3000
   let jokes = [
@@ -23,6 +24,10 @@ const port = 3000
   { "id": 19, "title": "The Time Traveler", "content": "I used to hate facial hair, but then it grew on me." },
   { "id": 20, "title": "The Overachieving Ladder", "content": "I'm on a seafood diet. I see food and I eat it." }
 ]
+
+
+app.use(cors());
+
 app.get('/api/code', (req, res) => {
   res.send(jokes)
 })
