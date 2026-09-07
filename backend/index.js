@@ -26,7 +26,9 @@ const port = 3000
 ]
 
 
-app.use(cors());
+app.use(cors( {
+  origin:"https://deployment-1-wsjr.onrender.com/api/code"
+}) );
 
 app.get('/api/code', (req, res) => {
   res.send(jokes)
