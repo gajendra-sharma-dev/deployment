@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   const [jokes, setJokes] = useState([])
   useEffect(() => {
-    fetch("https://deployment-1-wsjr.onrender.com/api/code")
+    fetch("/api/code")
       .then(response  => response.json())
       
       .then(data => setJokes(data))
